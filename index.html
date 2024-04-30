@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--BOOTSTRAP ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--FIM BOOTSTRAP ICONS-->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Murillo</title>
+</head>
+<body id="body">
+
+    <div id="overlay-fundo" class="overlay-fundo"></div>
+
+    <header>
+        <div id="interface" class="interface">
+            <div class="logo">
+                <a href="#">
+                    MURILLO
+                </a>
+            </div> <!--logo-->
+            <nav id="nav" class="menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#beneficiosA">Benefícios</a></li>
+                    <li><a href="#historiaA">História</a></li>
+                    <li><a href="#footer">Footer</a></li>
+                </ul>
+            </nav>
+            <div id="baixar-codigo" class="codigo">
+                <a href="#">
+                    <button>Código</button>
+                </a>
+            </div> <!--codigo-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div id="btn-fechar" class="btn-fechar">
+                    <i class="bi bi-box-arrow-in-right"></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#beneficiosA">Benefícios</a></li>
+                        <li><a href="#historiaA">História</a></li>
+                        <li><a href="#footer">Footer</a></li>
+                    </ul>
+                </nav>
+            </div> <!--menu-mobile-->
+
+        </div> <!--interface-->
+
+    </header>
+
+    <main id="main">
+        
+
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>HTML e CSS</h1>
+                        <p>Ao contrário do que muitos pensam, HTML e CSS não são linguagens de PROGRAMAÇÃO, o HTML é uma linguagem de <strong>marcação</strong> e o CSS é uma linguagem de <strong>estilo</strong>. O HTML (Linguagem de Marcação de Hipertexto) é a linguagem básica para a programação de um site, este site inteiro foi feito em HTML, o HTML é usado para estruturar o conteúdo de uma página web, já o CSS (Folhas de estilo em Cascata) é uma linguagem de estilo para a apresentação visual do site</p>
+
+                        <div class="codigo">
+                            <a href="#">
+                                <button id="baixar-codigo">Baixar Código</button>
+                            </a>
+                        </div>
+                    </div> <!--txt-topo-site-->
+
+                    <div class="img-topo-site">
+                        <img src="Imagens/Foto de Perfil.jpeg" alt="Murillo">
+                    </div> <!--img-topo-site-->
+
+                </div> <!--flex-->
+            </div> <!--interface-->
+        </section> <!--topo-do-site-->
+
+        <section id="beneficiosA" class="beneficios">
+            <div class="interface">
+                <h2 class="titulo">SEUS <span>BENEFÍCIOS</span></h2>
+                <div id="flex-beneficios" class="flex">
+                    <div id="website-box" class="beneficios-box">
+                        <i class="bi bi-code-slash"></i>
+                        <h3>WebSite</h3>
+                        <p>Com o HTML e CSS você pode criar um site completo e profissional desde o zero, podendo adicionar o que quiser a ele.</p>
+                    </div> <!--beneficios-box-->
+                    <div id="responsivo-box" class="beneficios-box">
+                        <i class="bi bi-phone"></i>
+                        <h3>Design Responsivo</h3>
+                        <p>Utilizando o CSS, você pode criar um site responsivo, ou seja, que se adapta a qualquer tipo de tela, desde uma telão gigante para também um celular pequeno, até mesmo para um relógio.</p>
+                    </div> <!--beneficios-box-->
+                    <div id="linguagens-box" class="beneficios-box">
+                        <i class="bi bi-filetype-js"></i>
+                        <h3>Linguagens</h3>
+                        <p>O HTML tem função para integrar outras linguagens dentro de um site, onde em um único site você pode utilizar várias linguagens juntas, como HTML, CSS, JavaScript, Banco de Dados, PHP e etc.</p>
+                    </div> <!--beneficios-box-->
+                </div> <!--flex-->
+            </div> <!--interface-->
+        </section> <!--beneficios-->
+
+        <section id="historiaA" class="historia">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-historia">
+                        <img src="Imagens/criador.jpg" alt="Tim Berners-Lee">
+                    </div> <!--img-historia-->
+
+                    <div class="txt-historia">
+                        <h2>A HISTÓRIA DA <span>INTERNET</span></h2>
+                        <p>Tudo começou durante a guerra fria, com a criação da DARPA, pelos EUA, inicialmente, a darpa queria interligar 4 pontos dos EUA, com isso, criaram uma rede chamada "arpanet" que interligava 4 computadores diferentes. Depois disso, o protocolo usado nesses computadores começou a dar errado, e aí entra o Robert Kahn. Ele criou o TCP, outro protocolo, que tratava os dados de maneira diferente, quebrando-os em pacote, ele também criou um tema muito valioso, "Internetting", que foi utilizado para mudar o nome da "Arpanet" para "Internet".</p>
+                        <p>Mas o TCP ainda tinha problemas, aí veio o Vint Cerf que criou um protocolo muito importante, o IP, ou Internet Protocol, e com a criação dos dois protocolos, foi criado o protocolo mais importante de todos os tempos, o TCP/IP, que permitiu um aumento gigante no número de máquinas que faziam parte da rede. No início da história da arpanet, a rede tinha só 4 pontos, e em 1977 a rede era enorme, e o TCP/IP deu conta. No momento que a rede começou a ficar caótica, o governo dos EUA não quis cuidar mais disso, e então se deu o nome "Internet". Em 2004 praticamente o mundo inteiro já tinha acesso a internet, onde a comunicação de dados são usadas por meio de satélites e cabos submarinos</p>
+                    </div> <!--txt-historia-->
+                </div> <!--flex-->
+            </div> <!--interface-->
+        </section> <!--historia-->
+
+    </main>
+
+    <footer id="footer">
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        MURILLO
+                    </div> <!--logo-footer-->
+                    <div class="social">
+                        <a href="https://github.com/MurilloAntonioBento"><button><i class="bi bi-github"></i></button></a>
+                        <a href="https://www.linkedin.com/in/murillo-antonio-bento-178b20303/"><button><i class="bi bi-linkedin"></i></button></a>
+                    </div> <!--social-->
+                </div> <!--flex-->
+            </div> <!--line-footer-->     
+
+            <div class="line-footer">
+                <p><i class="bi bi-envelope-at-fill"></i><a href="https://mail.google.com/mail/u/5/#inbox?compose=GTvVlcRwRrwKKCSbXlhznnLdGfNWxzllBqxXzNqglrVNkWcCjPKLkFWdrPjGKjcSBbpQFGqtfVkDs" target="_blank">murilloantoniobento@gmail.com</a></p>
+            </div> <!--line-footer-->     
+        </div> <!--interface-->
+    </footer>
+
+</body>
+</html>

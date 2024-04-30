@@ -1,0 +1,454 @@
+/* FONTES */
+
+@font-face {
+    font-family: "minhafonte";
+    src: url(FontesMontserrat/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: "fontetitulos";
+    src: url(FontesMontserrat/Montserrat-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "fontenegrito";
+    src: url(FontesMontserrat/Montserrat-Medium.ttf);
+}
+
+/* ESTILO GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    background-color: #232832;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+h2.titulo {
+    color: #fffff0;
+    font-size: 38px;
+    text-align: center;
+    font-family: fontetitulos;
+}
+
+h2.titulo span {
+    color: #8a6bbe;
+}
+
+button:hover {
+    box-shadow: 0px 0px 8px #fffff0;
+    transform: scale(1.05);
+}
+
+/* MENU */
+
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: saturate(180%) blur(20px); /* Efeito de blur */
+    padding: 1rem;
+    position: fixed;
+    z-index: 9999;
+}
+
+header > .interface {
+    display: flex; /* bota pra ficar uma do lado da outra e não uma em cima da outra */
+    align-items: center; /* Alinha ao centro */
+    justify-content: space-between; /* Pra dar um espaço entre a logo MURILLO e os itens do menu */
+    font-family: fontenegrito;
+}
+
+header > .interface > nav.menu a {
+    color: #5c5c5c;
+    text-decoration: none; /* Tira a linha que fica em baixo */
+    cursor: pointer;
+    display: inline-block; /* Vai ter as propriedades do inline e do block (ele tinha só a do block, aí não funcionava a propriedade transform */
+    transition: 0.2s;
+}
+
+header > .interface > nav.menu a:hover {
+    color: #fffff0;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none; /* tira as bolinha da lista */
+}
+
+header nav.menu ul li {
+    display: inline-block; /* deixa elas uma do lado da outra */
+    padding: 0 40px; /* Dá um espaço de 0 em cima e em baixo e de 40pxx pros lados, fazendo assim uma distância de um pro outro */
+}
+
+.codigo button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    font-family: fontetitulos;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #232832;
+    background-color: #fffff0;
+    border: none;
+    border-radius: 45px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+header > .interface > .logo > a {
+    color: #8a6bbe;
+    font-family: fontetitulos;
+    text-decoration: none; /* Tira a linha que fica em baixo */
+    cursor: pointer;
+}
+
+/* MENU MOBILE */
+
+.menu-mobile {
+    display: none;
+}
+
+/* TOPO DO SITE */
+
+section.topo-do-site {
+    padding: 40px 4%; /* Este 4% é utilizado para quando a tela for menor, os textos não ficarem colando nas laterais */
+    padding-top: 200px;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px; /* Espaço da esquerda pra direita */
+}
+
+.topo-do-site .txt-topo-site h1 {
+    color: #fffff0;
+    font-family: fontetitulos;
+    font-size: 42px;
+    line-height: 40px; /* Distância da linha de cima pra de baixo */
+}
+
+.topo-do-site .txt-topo-site p {
+    color: #fffff0;
+    margin: 40px 0;
+    font-family: minhafonte;
+}
+
+.topo-do-site .img-topo-site img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    position: relative; /* A animação (keyframes) só vai funcionar se a position for diferente da static */
+    animation: flutuando 2s ease-in-out infinite alternate; /* ease-in-out serve para a imagem ela começar devagar, no meio ser rápida e no final devagar denovo, e o infinite pra a animação ser inifinita, e a alternate é pra ela subir e descer animado, pra não chegar até o 100% e trocar pro 0% direto, sem animar */
+}
+
+@keyframes flutuando {
+    0% {
+        top: 0; /* A distância do topo vai ser 0 */
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+/* BENEFÍCIOS */
+
+section.beneficios {
+    padding: 100px 4%; /* Este 4% é utilizado para quando a tela for menor, os textos não ficarem colando nas laterais */
+}
+
+section.beneficios .flex {
+    gap: 60px;
+}
+
+.beneficios .beneficios-box {
+    color: #fffff0; 
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.beneficios .beneficios-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #fffff0;
+}
+
+.beneficios .beneficios-box i {
+    font-size: 70px;
+    color: #8a6bbe;
+}
+
+.beneficios .beneficios-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+    font-family: fontetitulos;
+}
+
+.beneficios .beneficios-box p {
+    font-family: minhafonte;
+}
+
+.overlay-fundo {
+    background-color: #000000af;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: none;
+}
+
+.beneficios #website-box.zoom {
+    transform: translateX(400px) scale(1.5);
+    background-color: #232832;
+    z-index: 10001;
+}
+
+.beneficios #responsivo-box.zoom {
+    transform: scale(1.5);
+    background-color: #232832;
+    z-index: 10001;
+}
+
+.beneficios #linguagens-box.zoom {
+    transform: translateX(-400px) scale(1.5);
+    background-color: #232832;
+    z-index: 10001;
+}
+
+
+/* HISTÓRIA*/
+
+.historia .img-historia img {
+    height: 350px;
+    width: 350px;
+    border-radius: 20px;
+}
+
+section.historia {
+    padding: 80px 4%; /* Este 4% é utilizado para quando a tela for menor, os textos não ficarem colando nas laterais */
+}
+
+section.historia .flex {
+    align-items: center; /* Alinhar os itens (textos) no centro */
+    gap: 60px; /*Um "respiro", o que seria um espaçamento pro lado pro texto não ficar colado na imagem */
+}
+
+.historia .txt-historia {
+    color: #fffff0;
+}
+
+.historia .txt-historia h2 {
+    font-family: fontetitulos;
+    font-size: 40px;
+    line-height: 40px; /* Distância da linha de cima pro de baixo */
+    margin-bottom: 30px; /* Distância pro parágrafo de baixo */
+}
+
+.historia .txt-historia h2 span {
+    color: #8a6bbe;
+    display: block; /* o display dele era inline, assim ele ficava sempre um do lado do outo, mas no display block, ele vai pra linha de baixo */
+}
+
+.historia .txt-historia p {
+    margin: 20px 0;
+    font-family: minhafonte;
+    text-align: justify; /* O texto vai até o final da linha, sem quebras de linhas em lugares que não devia */
+}
+
+.social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Fica um circulo perfeito */
+    border: none;
+    background-color: #8a6bbe;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: .2s;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 10px 10px #ffffff1d;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer p i {
+    color: #8a6bbe;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: #fffff0;
+    font-family: minhafonte;
+}
+
+footer .logo-footer {
+    color: #8a6bbe;
+    font-family: fontetitulos;
+    align-items: center;
+    font-size: 25px;
+}
+
+/* DESIGN RESPONSIVO */ 
+
+@media screen and (max-width: 900px) {
+    header .codigo button {
+        padding: 0;
+        font-size: 0;
+        font-weight: 0;
+        letter-spacing: 0;
+        color: none;
+        background-color: none;
+        border: none;
+        border-radius: none;
+        cursor: none;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    
+    /* o topo começa a quebrar */
+
+    .topo-do-site .flex {
+        flex-direction: column-reverse;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    
+    /* as especialidades começa a quebrar */
+
+    .beneficios .flex {
+        flex-direction: column;
+    }
+
+    .beneficios #website-box.zoom {
+        transform: scale(1);
+        background-color: #232832;
+        z-index: 10001;
+    }
+    
+    .beneficios #responsivo-box.zoom {
+        transform: scale(1);
+        background-color: #232832;
+        z-index: 10001;
+    }
+    
+    .beneficios #linguagens-box.zoom {
+        transform: scale(1.2);
+        background-color: #232832;
+        z-index: 10001;
+    }
+
+}
+
+@media screen and (max-width: 949px) {
+    
+    /* O sobre mim começa a quebrar */
+
+    .historia .flex {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+    
+    /* A imagem do sobre mim começa a quebrar e criar barra de rolagem */
+
+    .historia .flex {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+    
+    .menu {
+        display: none;
+    }
+
+    .btn-abrir-menu i {
+        color: #5c5c5c;
+        font-size: 40px;
+        cursor: pointer;
+        transition: .2s;
+        margin-right: 30px;
+    }
+    
+    .btn-abrir-menu i:hover {
+        color: #fffff0;
+    }
+    
+    .menu-mobile {
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: saturate(180%) blur(20px);
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 9998;
+        width: 0%;
+        overflow: hidden;
+        transition: .2s;
+        margin-right: 40px;
+        display: block;
+    }
+    
+    .menu-mobile.abrir-menu {
+        width: 70%;
+    }
+    
+    .menu-mobile nav ul {
+        text-align: right;
+    }
+    
+    .menu-mobile nav ul li a {
+        color: #5c5c5c;
+        font-size: 20px;
+        font-weight: 300;
+        font-family: fontenegrito;
+        padding: 20px 4%;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        transition: .2s;
+    }
+    
+    .menu-mobile .btn-fechar {
+        color: #8a6bbe;
+        font-size: 30px;
+        padding: 20px 5%;
+        cursor: pointer;
+    }
+    
+    .menu-mobile nav ul li a:hover {
+        color: #fffff0;
+    }
+
+}
