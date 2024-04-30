@@ -1,4 +1,4 @@
-<h3 align="center">Explicação HTML e CSS<br/><a href="murilloantoniobento.github.io/Portfolio">murilloantoniobento.github.io/HTMLeCSS</a></h3>
+<h3 align="center">Explicação HTML e CSS<br/><a href="https://murilloantoniobento.github.io/Explica-o-HTML-e-CSS/">murilloantoniobento.github.io/Explica-o-HTML-e-CSS</a></h3>
 
 #### Tecnologias
 
