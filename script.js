@@ -16,7 +16,7 @@ main.addEventListener('click', ()=>{
 
 let overlay = document.getElementById('overlay-fundo')
 
-document.getElementById('baixar-curriculo').addEventListener('click', function() {
+document.getElementById('baixar-codigo').addEventListener('click', function() {
     var linkDownload = document.createElement('a');
     
     linkDownload.href = 'Arquivos';
